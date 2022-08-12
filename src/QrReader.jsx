@@ -25,17 +25,14 @@ function QrReader(props) {
        return alert('Error: Your browser doesn\'t support BarcodeDetector.')
     }
 
-    // Get the video element
     videoEl = document.querySelector('#video')
-    // Check if device has camera
+
     if (navigator.mediaDevices?.getUserMedia) {
-      // Use video without audio
       const constraints = {
         video: true,
         audio: false
       }
 
-      // Start video stream
       navigator.mediaDevices.getUserMedia(constraints).then(stream => videoEl.srcObject = stream);
     }
   });
