@@ -9,7 +9,7 @@ function App() {
     <div class={styles.App}>
       <h1>QR Code Scanner</h1>
       <div class={styles.QrReaderWrapper}>
-        <QrReader onDetect={
+        <QrReader onScan={
           (barcode) => {
             if (barcode) {
               setRecentlyScanned((recentlyScanned) => [...recentlyScanned, barcode.rawValue])

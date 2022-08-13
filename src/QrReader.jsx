@@ -11,7 +11,7 @@ function QrReader(props) {
         if (codes.length === 0) return;
 
         for (const barcode of codes)  {
-          props.onDetect(barcode)
+          props.onScan(barcode)
         }
       }).catch(err => {
         // Log an error if one happens
