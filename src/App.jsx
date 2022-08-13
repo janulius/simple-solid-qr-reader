@@ -9,7 +9,7 @@ function App() {
     <div class={styles.App}>
       <h1>QR Code Scanner</h1>
       <div class={styles.QrReaderWrapper}>
-        <QrReader onScan={
+        <QrReader onDetect={
           (barcode) => {
             if (barcode) {
               setRecentlyScanned((recentlyScanned) => [...recentlyScanned, barcode.rawValue])
@@ -32,7 +32,7 @@ function App() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
